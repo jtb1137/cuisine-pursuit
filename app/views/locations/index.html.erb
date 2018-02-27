@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Locations!</h1>
+    <div class="card-deck">
+        <% @locations.each do |location| %>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><%= link_to location.name, location_path(location) %></h5>
+                    <p class="card-text"> This should probably be information </p>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
