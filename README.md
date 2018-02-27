@@ -20,10 +20,10 @@ Future Ideas:
     - Create navbar
 1. Establish CRUD capabilities for Restaurant
     - restaurant controller, routes, model
-        - add image -> Paperclip or pull from FB?
+        - add image -> Paperclip
         - add validations
             - Custom validation to ensure address formatting
-            - Address: ruby geocoder?
+            - Address: Thinking Mainstreet gem
     - Planned inclusions:
         - include facebook feed or some other way to keep up with events
         - include yelp scores
