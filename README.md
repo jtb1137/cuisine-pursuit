@@ -42,5 +42,5 @@ Future Ideas:
         - Trip dashboard with Facebook-style news feed for saved restaurants to keep up-to-date
 
 
-Restaurant  <-> Category (Join Table)
-            <-> Location (Join Table)
+Restaurant  <-> Category (Join Table) = restaurant_categories
+            <-> Location (Join Table) = restaurant_locations
