@@ -6,7 +6,7 @@ designed to crowdsource the best places to eat within a given city.
 
 Bootstrap, Devise, Omniauth, Omniauth-facebook, Omniauth-twitter
 
-- Sortable by Category (fancy, fast-food, etc), location (NYC, Boston, etc), food-type (seafood, steakhouse, etc)
+- Sortable by Category (fancy, fast-food, steakhouse, etc), location (NYC, Boston, etc)
 - Follow/subscribe/add restaurant to trip
 
 Future Ideas:
@@ -32,8 +32,6 @@ Future Ideas:
     - Drop down for new/edit
 3. Implement Location
     - Drop down for new/edit
-4. Implement Food-Type
-    - Drop down for new/edit
 5. Implement Devise User with Omniauth
     - Add ability to save restaurant to a trip (list of related restaurants)
         - Create nested routes for Trips
@@ -42,3 +40,7 @@ Future Ideas:
     - Planned inclusions:
         - Google sign-in
         - Trip dashboard with Facebook-style news feed for saved restaurants to keep up-to-date
+
+
+Restaurant  <-> Category (Join Table)
+            <-> Location (Join Table)
