@@ -1,1 +1,5 @@
-<h1>Hello World</h1>
+<div class="container">
+    <%= @restaurants.each do |rest| %>
+        <h2><%= rest.name %> - <%= rest.address %> </h2>
+    <% end %>
+</div>
