@@ -21,7 +21,9 @@ Future Ideas:
 1. Establish CRUD capabilities for Restaurant
     - restaurant controller, routes, model
         - add image -> Paperclip or pull from FB?
-        - add validations - DONT FORGET TO DO THIS
+        - add validations
+            - Custom validation to ensure address formatting
+            - Address: ruby geocoder?
     - Planned inclusions:
         - include facebook feed or some other way to keep up with events
         - include yelp scores

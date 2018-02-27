@@ -1,1 +1,7 @@
-<h2><%= @restaurant.name %> - <%= @restaurant.address %></h2>
+<div class="container">
+    <h2><%= @restaurant.name %> - <%= @restaurant.address %></h2>
+    <div class="btn-group">
+        <%= link_to "Back", root_path, class: "btn btn-secondary" %>
+        <%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-secondary" %>
+    </div>
+</div>
