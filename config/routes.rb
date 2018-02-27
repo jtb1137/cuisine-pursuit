@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :categories
   resources :locations
 
-  root 'restaurants#index'
+  root 'locations#index'
 end
