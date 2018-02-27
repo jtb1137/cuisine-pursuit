@@ -1,5 +1,9 @@
 <div class="container">
-    <%= @restaurants.each do |rest| %>
-        <h2><%= rest.name %> - <%= rest.address %> </h2>
-    <% end %>
+    <ul class="list-group">
+        <%= @restaurants.each do |restaurant| %>
+            <li class="list-group-item">
+                <%= link_to restaurant.name, restaurant_path(restaurant) %>
+            </li>
+        <% end %>    
+    </ul>
 </div>

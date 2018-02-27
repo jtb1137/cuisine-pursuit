@@ -21,7 +21,7 @@ Future Ideas:
 1. Establish CRUD capabilities for Restaurant
     - restaurant controller, routes, model
         - add image -> Paperclip or pull from FB?
-        - add validations
+        - add validations - DONT FORGET TO DO THIS
     - Planned inclusions:
         - include facebook feed or some other way to keep up with events
         - include yelp scores

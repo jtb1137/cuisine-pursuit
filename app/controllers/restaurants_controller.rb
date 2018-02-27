@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+    before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
+
     def index
         @restaurants = Restaurant.all
     end
@@ -12,7 +14,7 @@ class RestaurantsController < ApplicationController
         # don't forget to set values for associated models when they are added
         if @restaurant.save
             flash[:alert] = "Successfully Saved Restaurant"
-            redirect_to root_path # Change this
+            redirect_to restaurant_path(@restaurant)
         else
             flash[:alert] = "Failed to Save Restaurant"
             render 'new'
@@ -26,14 +28,27 @@ class RestaurantsController < ApplicationController
     end
 
     def update
+        if @restaurant.update(restaurant_params)
+            flash[:alert] = "Successfully Updated Restaurant"
+            redirect_to restaurant_path(@restaurant)
+        else
+            flash[:alert] = "Failed to Update Restaurant"
+            render 'edit'
+        end        
     end
 
     def destroy
+        @restaurant.destroy
+        redirect_to root_path
     end
 
     private
 
     def restaurant_params
         params.require(:restaurant).permit(:name, :address)
+    end
+
+    def set_restaurant
+        @restaurant = Restaurant.find(params[:id])
     end
 end
