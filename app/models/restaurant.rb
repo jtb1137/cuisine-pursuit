@@ -5,4 +5,6 @@ class Restaurant < ApplicationRecord
 
     has_many :restaurant_categories
     has_many :categories, through: :restaurant_categories
+    accepts_nested_attributes_for :categories
+
 end
