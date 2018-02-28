@@ -5,7 +5,11 @@ class Restaurant < ApplicationRecord
 
     has_many :restaurant_categories
     has_many :categories, through: :restaurant_categories
+    has_many :restaurant_locations
+    has_many :locations, through: :restaurant_locations
+
     accepts_nested_attributes_for :categories
+    accepts_nested_attributes_for :locations
 
     def categories_attributes=(category_attributes)
         category_attributes.values.each do |category_attribute|
