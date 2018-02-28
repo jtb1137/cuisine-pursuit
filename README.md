@@ -2,7 +2,7 @@
 CUISINE PURSUIT
 
 Plan ahead for your next big trip with CUISINE PURSUIT, a web application built with Ruby-on-Rails, 
-designed to crowdsource the best places to eat within a given city.
+designed to crowdsource the best hidden gems to eat at within a given city.
 
 Bootstrap, Devise, Omniauth, Omniauth-facebook, Omniauth-twitter
 

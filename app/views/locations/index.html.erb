@@ -1,15 +1,14 @@
-<div class="container">
-    <h2>Choose your destination:</h2>
-    <div class="dropdown show">
+<div class="container-fluid full-width-image h-100">
+    <h2 class="text-light">Choose your destination: (Make this better - Add a box? Shadow? New Font?)</h2>
+    <div class="dropdown show center">
         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Where are you going?
         </a>
 
-        <div class="dropdown-menu justify-content-center" aria-labelledby="dropdownMenuLink">
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <% @locations.each do |location| %>
                 <%= link_to location.name, location_path(location), class: "dropdown-item" %>
             <% end %>
         </div>
     </div>
 </div>
-
