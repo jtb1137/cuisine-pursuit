@@ -17,4 +17,11 @@ class Restaurant < ApplicationRecord
             self.categories << new_category
         end
     end
+
+    def locations_attributes=(location_attributes)
+        locations_attributes.values.each do |location_attribute|
+            new_location = Location.find_or_create_by(location_attribute)
+            self.locations << new_location
+        end
+    end
 end
