@@ -11,9 +11,9 @@
         <%= f.label :address %>
         <%= f.text_field :address, class: "form-control" %>
     </div> 
+
     <%= render 'category_select', f: f %>
     <%= render 'location_select', f: f %>
-
 
     <%= f.submit class: "btn btn-primary"%>
 <% end %>
