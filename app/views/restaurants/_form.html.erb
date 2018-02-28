@@ -11,6 +11,8 @@
         <%= f.label :address %>
         <%= f.text_field :address, class: "form-control" %>
     </div> 
+
+    <!-- Break this out into a partial/format better -->
     <div class="form-group">
         <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "form-control" %>
     </div>
@@ -21,5 +23,18 @@
             <%= categories_fields.text_field :name %>
         <% end %>
     </div> 
+
+    <!-- Break this out into a partial/format better -->
+    <div class="form-group">
+        <%= f.collection_check_boxes :location_ids, Location.all, :id, :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= f.fields_for :locations, @restaurant.locations.build do |locations_fields| %>
+            <%= locations_fields.text_field :name %>
+            <%= locations_fields.text_field :name %>
+            <%= locations_fields.text_field :name %>
+        <% end %>
+    </div> 
+
     <%= f.submit class: "btn btn-primary"%>
 <% end %>
