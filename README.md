@@ -44,3 +44,5 @@ Future Ideas:
 
 Restaurant  <-> Category (Join Table) = restaurant_categories
             <-> Location (Join Table) = restaurant_locations
+
+**** Fix redirects in controllers - some broken due to root change
