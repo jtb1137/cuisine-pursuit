@@ -1,12 +1,14 @@
 <div class="container">
-    <h1>Locations!</h1>
-    <div class="card-deck">
-        <% @locations.each do |location| %>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><%= link_to location.name, location_path(location) %></h5>
-                </div>
-            </div>
-        <% end %>
+    <div class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <% @locations.each do |location| %>
+                <%= link_to location.name, location_path(location), class: "dropdown-item" %>
+            <% end %>
+        </div>
     </div>
 </div>
+

@@ -4,4 +4,9 @@
         <%= link_to "Back", locations_path, class: "btn btn-secondary" %>
         <%= link_to "Edit", edit_location_path(@location), class: "btn btn-secondary" %>
     </div>
+    <ul>
+        <% @location.restaurants.each do |restaurant| %>
+            <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+        <% end %>
+    </ul>
 </div>
