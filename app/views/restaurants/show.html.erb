@@ -1,6 +1,11 @@
 <div class="container">
     <%= image_tag @restaurant.restaurant_img(:medium) %>
     <h2><%= @restaurant.name %> - <%= @restaurant.address %></h2>
+    <ul>
+        <% @restaurant.categories.each do |category| %>
+            <li><%= category.name %></li>
+        <% end %>
+    </ul>
     <div class="btn-group">
         <%= link_to "Back", root_path, class: "btn btn-secondary" %>
         <%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-secondary" %>
