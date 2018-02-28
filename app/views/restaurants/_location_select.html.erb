@@ -1,0 +1,8 @@
+<div class="form-group">
+    <%= f.collection_check_boxes :location_ids, Location.all, :id, :name, { selected: f.object.category_ids }, class: "form-control" %>
+</div>
+<div class="form-group">
+    <%= f.fields_for :locations, @restaurant.locations.build do |locations_fields| %>
+        <%= locations_fields.text_field :name %>
+    <% end %>
+</div> 
