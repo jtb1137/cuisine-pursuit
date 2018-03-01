@@ -46,3 +46,6 @@ Restaurant  <-> Category (Join Table) = restaurant_categories
             <-> Location (Join Table) = restaurant_locations
 
 **** Fix redirects in controllers - some broken due to root change
+**** Might be nesting routes to improve UX
+    Each restaurant should probably only be directly associated with 1 city - 
+        Each particular restaurant should have its own show view
