@@ -13,9 +13,11 @@ class Restaurant < ApplicationRecord
     accepts_nested_attributes_for :locations
 
     def categories_attributes=(category_attributes)
-        category_attributes.values.each do |category_attribute|
-            new_category = Category.find_or_create_by(category_attribute)
-            self.categories << new_category
+        if category_attributes != nil
+            category_attributes.values.each do |category_attribute|
+                new_category = Category.find_or_create_by(category_attribute)
+                self.categories << new_category
+            end
         end
     end
 

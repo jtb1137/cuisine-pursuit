@@ -1,4 +1,4 @@
 <div class="form-group">
     <%= f.label :location_ids, "City" %>
-    <%= f.collection_select(:location_ids, Location.all, :id, :name, { selected: f.object.location_ids }, class: "form-control") %>
+    <%= select_tag :location_ids, options_from_collection_for_select(Location.all, :id, :name), include_blank: true, class: "form-control" %>
 </div>

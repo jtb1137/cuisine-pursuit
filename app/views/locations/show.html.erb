@@ -1,9 +1,9 @@
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid restaurant-show-image" style="background-image: url('<%= @location.location_img.url %>');">
     <div class="container-fluid">
-        <h1 class="display-4"> <%= @location.name %> </h1>
-        <p class="lead">This needs a different background</p>
+        <h1 class="display-4 text-light"> <%= @location.name %> </h1>
     </div>
 </div>
+
 <div class="container-fluid">
     <div class="card-deck">
         <% @location.restaurants.each do |restaurant| %>

@@ -13,10 +13,8 @@ class LocationsController < ApplicationController
         @location = Location.new(location_params)
 
         if @location.save
-            flash[:alert] = "Successfully Saved Location"
             redirect_to location_path(@location)
         else
-            flash[:alert] = "Failed to Save Location"
             render 'new'
         end
     end
@@ -29,24 +27,21 @@ class LocationsController < ApplicationController
 
     def update
         if @location.update(location_params)
-            flash[:alert] = "Successfully Updated Location"
             redirect_to location_path(@location)
         else
-            flash[:alert] = "Failed to Update Location"
             render 'edit'
         end        
     end
 
     def destroy
         @location.destroy
-        flash[:alert] = "Successfully Deleted Location"
         redirect_to locations_path
     end
 
     private
 
     def location_params
-        params.require(:location).permit(:name)
+        params.require(:location).permit(:name, :location_img)
     end
 
     def set_location

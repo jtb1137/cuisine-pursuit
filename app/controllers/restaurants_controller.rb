@@ -13,10 +13,8 @@ class RestaurantsController < ApplicationController
         @restaurant = Restaurant.new(restaurant_params)
         # don't forget to set values for associated models when they are added
         if @restaurant.save
-            flash[:alert] = "Successfully Saved Restaurant"
             redirect_to restaurant_path(@restaurant)
         else
-            flash[:alert] = "Failed to Save Restaurant"
             render 'new'
         end
     end
@@ -29,17 +27,14 @@ class RestaurantsController < ApplicationController
 
     def update
         if @restaurant.update(restaurant_params)
-            flash[:alert] = "Successfully Updated Restaurant"
             redirect_to restaurant_path(@restaurant)
         else
-            flash[:alert] = "Failed to Update Restaurant"
             render 'edit'
         end        
     end
 
     def destroy
         @restaurant.destroy
-        flash[:alert] = "Successfully Deleted Restaurant"
         redirect_to root_path
     end
 
