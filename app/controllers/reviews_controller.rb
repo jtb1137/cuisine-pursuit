@@ -1,11 +1,13 @@
 class ReviewsController < ApplicationController
+    before_action :set_restaurant
+    
     def new
         @review = Review.new
     end
 
     def create
         @review = Review.new(review_params)
-        @review.book_id = @restaurant.id
+        @review.restaurant_id = @restaurant.id
         # Will need to set a user
 
         if @review.save

@@ -7,6 +7,7 @@ class Restaurant < ApplicationRecord
     has_many :categories, through: :restaurant_categories
     has_many :restaurant_locations, dependent: :destroy
     has_many :locations, through: :restaurant_locations
+    has_many :reviews, dependent: :destroy
 
     accepts_nested_attributes_for :categories
     accepts_nested_attributes_for :locations
