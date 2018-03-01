@@ -1,12 +1,14 @@
-<div class="container">
-    <h2><%= @location.name %></h2>
-    <div class="btn-group">
-        <%= link_to "Back", locations_path, class: "btn btn-secondary" %>
-        <%= link_to "Edit", edit_location_path(@location), class: "btn btn-secondary" %>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container-fluid">
+        <h1 class="display-4"> <%= @location.name %> </h1>
+        <p class="lead">This needs a different background</p>
     </div>
-    <ul>
-        <% @location.restaurants.each do |restaurant| %>
-            <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-        <% end %>
-    </ul>
 </div>
+<div class="container-fluid">
+    <div class="card-deck">
+        <% @location.restaurants.each do |restaurant| %>
+            <%= render 'restaurant', restaurant: restaurant %>
+        <% end %>
+    </div>
+</div>
+
